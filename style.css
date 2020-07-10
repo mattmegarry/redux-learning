@@ -1,46 +1,81 @@
+/* --- TYPOGRAPHY --- */
 html {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
     Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
 }
 
+.header {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.footer {
+  font-size: 0.8rem;
+}
+
+/* --- LAYOUT & BACKGROUNDS --- */
+
 html,
 body {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
 }
 
-.main {
-  flex: 1 0 auto;
+.header,
+.main,
+.footer {
+  height: 100%;
+  margin: 0 20vw 0 20vw;
 }
 
-.header {
+.header-outer {
   height: 15vh;
   background-color: aliceblue;
-  font-size: 3rem;
-  font-weight: 700;
 }
 
-.header > div,
-.footer > div {
+.main-outer {
+  flex: 1 0 auto;
+  background-color: white;
+}
+
+.footer-outer {
+  height: 8vh;
+  flex-shrink: 0;
+  background-color: aliceblue;
+}
+
+.header,
+.footer {
   display: flex;
   align-items: center;
 }
 
 .main {
-  background-color: white;
-}
-
-.main > div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-a {
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+/* --- COMPONENTS --- */
+
+.category-menu {
+  border: solid 1px black;
+  border-radius: 1rem;
+  padding: 1rem 2rem 2rem 1rem;
+}
+
+.menu-item {
   display: block;
   border: solid 1px black;
   border-radius: 5rem;
@@ -49,27 +84,6 @@ a {
   padding: 0.5rem;
   text-decoration: none;
   margin: 1rem 2rem 0 2rem;
-}
-
-.category-menu {
-  border: solid 1px black;
-  border-radius: 1rem;
-  padding: 1rem 2rem 2rem 1rem;
-}
-
-.container {
-  height: 100%;
-  margin: 0 20vw 0 20vw;
-}
-
-.footer {
-  height: 8vh;
-  flex-shrink: 0;
-  background-color: aliceblue;
-}
-
-.footer > div {
-  justify-content: flex-end;
 }
 
 .label {
